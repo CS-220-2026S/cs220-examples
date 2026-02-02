@@ -10,6 +10,7 @@ int main(int argc, char * argv[]){
   */
   int x = atoi(argv[1]);
   int y = atoi(argv[2]);
-  
+  coord xy = coord_create(x,y);
+  printf("x = %d, y = %d\n", coord_getx(xy), coord_gety(xy));
   return 0;
 }

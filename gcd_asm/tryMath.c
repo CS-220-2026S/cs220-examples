@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int gcd_asm(int a, int b); // take the greatest common divisor of a and b
-int lcm_asm(int a, int b); // take the lowest common multiple of a and b
+int lcm_asm(int a, int b); // take the least common multiple of a and b
 
 int main(int argc, char *argv[]){
   int a = atoi(argv[1]);

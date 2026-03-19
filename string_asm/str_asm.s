@@ -15,5 +15,13 @@ strlen_asm:
 	ret
 
 strcpy_asm:
-
+	xor %rdx, %rdx
+	jmp .L3
+.L4:
+	inc %rdx
+.L3:
+	mov (%rsi, %rdx, 1), %cl
+	mov %cl, (%rdi, %rdx, 1)
+	test %cl, %cl
+	jne .L4
         ret

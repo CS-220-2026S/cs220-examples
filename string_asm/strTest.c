@@ -10,6 +10,6 @@ int main(){
   printf("copying str2 to str1...\n");
   strcpy_asm(str1,str2);
   printf("str1 = %s\n", str1);
-  printf("len(str2) = %d\n", strlen_asm(str2));
+  printf("len(str1) = %d\n", strlen_asm(str1));
   return 0;
 }

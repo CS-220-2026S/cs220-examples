@@ -4,8 +4,14 @@
 #include <sys/wait.h>
 
 int main(){
-  printf("launching shell...\n");
-  // TODO: exec 'ls -l'
-  printf("finished\n");
+  int status;
+  printf("printing contents of directory...\n");
+  // exec 'ls -l'
+  char *argv[] = {"/bin/ls","-l",NULL};
+  if (fork() == 0)
+    execve("/bin/ls", argv, NULL);
+  wait(&status);
+  if (status == 0) // forked process executed normally
+    printf("finished\n");
   return 0 ;
 }
